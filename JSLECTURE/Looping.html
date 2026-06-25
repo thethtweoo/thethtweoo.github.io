@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+<body>
+    
+    <h1>Looping</h1>
+
+    <script>
+        // for loop
+        // for(initialize; condition; update){
+
+
+        // }
+
+
+        for(let i = 0; i < 10; i++){
+            document.write(`<h3>Hello World ${i+1} </h3>`);
+        }
+
+
+        let laptopList = ['Mac', 'Dell', 'Lenovo', 'Hp', 'Sony'];
+
+        // document.write("<h3>My laptop is " + laptopList[0] + "</h3>");
+        // document.write(`<h3>My laptop is ${laptopList[0]}  </h3>`);
+
+
+        for(let i = 0; i < laptopList.length; i++){
+            document.write(`<h3> ${i+1}.My Laptop is ${laptopList[i]}</h3>`)
+        }
+
+
+        // let num = prompt("Enter Number")
+        // for(let i = 1; i<= 12; i++){
+        //     document.write(`<h3> ${num} x ${i} = ${num * 1}</h3>`)
+        // }
+
+
+
+
+        for(let i = 0; i < 5; i++){
+            for(let k = 0; k<= i; k++){
+                document.write(`*`);
+            }
+            document.write(`<br>`)
+        }
+
+
+
+
+
+        // While Loop
+
+        let number = parseInt(prompt("Enter a number"));
+
+        // while(condition){
+        //     Code 
+        //     update
+        // }
+
+
+        // while(number , 100){
+        //     document.write(`Your number is while loop ${number} <br>`);
+
+        //     number+= 10;
+        // }
+
+
+        // Do while Loop 
+        //  do {
+        //     code 
+        //     update 
+
+        // }while(condition)
+
+        do{
+            document.write(`Your number is do while loop ${number}<br>`);
+
+            number+= 20;
+        }while(number < 100);
+
+
+
+
+    </script>
+</body>
+</html>

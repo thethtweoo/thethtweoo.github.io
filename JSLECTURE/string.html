@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    
+    <h1>String</h1>
+
+    <script>
+        // string concatenation
+        let job = "        Developer        Aung      Aung          ";
+        document.write(job.trim());
+        
+        
+
+
+        let ser = "Developer Aung Aung";
+        console.log(ser.search("Aung Aung"));
+        console.log(ser.indexOf("Aung Aung"));
+
+
+
+        let rep = "Developer Aung Aung";
+        console.log(rep.replace("Developer","Student"));
+        document.write("<br>");
+
+
+        let num = '1,222,334,555,667,888';
+        console.log(num.replace(/\,/g,''));
+
+
+        document.write("I'm Thet Htwe Oo");
+        document.write("<br>");
+
+
+        document.write('I\'m Thet Htwe Oo');
+        document.write("<br>");
+
+        document.write("I'm Thet Htwe Oo, 5' 9\"");
+        document.write("<br>");
+
+
+        document.write(`I'm Thet Htwe Oo, 5' 9" and I'm a Developer`);
+    </script>
+</body>
+</html>

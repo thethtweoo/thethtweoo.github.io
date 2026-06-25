@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // named function 
+
+        function sayHi(){
+            // code 
+            document.write("hello world");
+        }
+        sayHi();
+
+
+        // function with paramenter / arguments
+        function sum(num1,num2){
+            let result = num1 + num2;
+            document.write(`<be>The sum of ${num1} and ${num2} is ${result}`);
+        }
+        sum(20,40);
+        sum(445,8890);
+        sum(7789,9025);
+
+
+
+        // function with default parameters 
+        function mult(num1=50,num2=100){
+            let result = num1 * num2;
+            document.write(`<br>This multiplication of ${num1} and ${num2} is ${result}`;)
+        }
+        mult();
+        mult(20);
+        mult(40,50);
+
+
+
+        // function with return 
+        function sub(num1,num2){
+            let result = num1 - num2;
+            return result;
+        }
+        let data = sub (200,50);
+        document.write(`<br>This result is ${data}`);
+
+
+
+        if(data > 0){
+            document.write(`<br>This result is greater than 0`);
+        }else{
+            document.write(`<br>This result is smaller than 0`);
+        }
+    </script>
+</body>
+</html>

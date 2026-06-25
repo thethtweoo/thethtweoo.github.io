@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ၁။ ကိုယ်သတ်မှတ်ထားမယ့် တန်ဖိုး (Target Number)
+const targetNumber = 27; 
+
+// ၂။ User ဘယ်နှစ်ကြိမ်ရိုက်ပြီးပြီလဲဆိုတာကို မှတ်မယ့် Variable
+let attempts = 0; 
+
+// ၃။ User ကို အမှန်ရတဲ့အထိ ထပ်ခါတလဲလဲ မေးမယ့် Loop ပတ်လမ်း
+while (true) {
+    // User ဆီက Input တောင်းခြင်း
+    let userInput = prompt("၁ ကနေ ၅၀ ကြားထဲက ဂဏန်းတစ်ခုကို ရိုက်ထည့်ပါ:");
+    
+    // Cancel နှိပ်လိုက်ရင် Game ကို ရပ်လိုက်မယ်
+    if (userInput === null) {
+        alert("ဂိမ်းကို အဆုံးသတ်လိုက်ပါပြီ။");
+        break;
+    }
+    
+    // ရိုက်ထည့်လိုက်တဲ့စာကို ဂဏန်းအဖြစ် ပြောင်းလဲခြင်း
+    let userNumber = Number(userInput);
+    attempts++; // ရိုက်ထည့်လိုက်တိုင်း ကြိုးစားမှုအကြိမ်ရေကို ၁ တိုးမယ်
+
+    // ၄။ ရလဒ်ကို တိုက်စစ်ခြင်း
+    if (userNumber === targetNumber) {
+        alert(`ဂုဏ်ယူပါတယ်။ အဖြေမှန်ပါတယ်! သင်ဟာ ${attempts} ကြိမ်မြောက်မှာ အဖြေမှန်ကို ရသွားတာဖြစ်ပါတယ်။`);
+        break; // အဖြေမှန်သွားရင် Loop ကို ပိတ်လိုက်မယ်
+    } else if (userNumber < 1 || userNumber > 50 || isNaN(userNumber)) {
+        alert("ကျေးဇူးပြု၍ ၁ ကနေ ၅၀ ကြားက တရားဝင်ဂဏန်းတစ်ခုကိုပဲ ရိုက်ထည့်ပါ။");
+    } else if (userNumber < targetNumber) {
+        alert("မမှန်သေးပါဘူး (သင်ရိုက်တာ နည်းနေသေးတယ်)။ ပြန်ကြိုးစားကြည့်ပါ!");
+    } else {
+        alert("မမှန်သေးပါဘူး (သင်ရိုက်တာ များနေတယ်)။ ပြန်ကြိုးစားကြည့်ပါ!");
+    }
+}
+
+    </script>
+</body>
+</html>
