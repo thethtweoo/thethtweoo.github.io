@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    
+    <h1>jQuery is funny!</h1>
+    <button id="click">Click</button>
+
+    <p id="p_click">This is p element 1.</p>
+    <p id="p_slect">This is p selector 2.</p>
+    <p class="p_class">This is p element 3.</p>
+    <h2 class="p_click">This is p element 4.</h2>
+    <h3 class="p_click">This is p element 5.</h3>
+
+
+
+    <script>
+
+        // - $
+        // - selector
+        // - action 
+        // -call back function
+
+
+        $(document).ready(function(){
+
+            $('#click').click(function(){
+                $('p').hide(function(){
+                    alert("P element is hide.");
+                });
+            });
+
+            $('#p_click').click(function(){
+                $('.p_class').hide();
+            });
+
+
+            // this selector 
+            $('#p_slect').click(function(){
+                $(this).hide();
+            });
+
+        });
+               
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    
+    <h1>Event</h1>
+
+    <img src="images/clt_web_banner.webp" alt="" width="200" height="200" onclick="big()"  onmouseleave="normal()" id="myImg">
+
+
+
+    <input type="text" onchange="result()" id="myInput">
+    <p id="myP"></p>
+
+
+
+    <script>
+        function big(){
+            let myImg = document.getElementById('myImg');
+            myImg.style.width = '400px';
+            myImg.style.height= '400px';
+            myImg.style.borderRadius = '50%';
+        }
+
+
+
+        function normal(){
+            let myImg = document.getElementById('myImg');
+            myImg.style.width = '200px';
+            myImg.style.height = '200px';
+            myImg.style.borderRadius = '0px';
+        }
+
+
+
+
+        function result(){
+            let myInput = document.getElementById('myInput');
+            let result = myInput.value ;
+
+            let myP = document.getElementById('myP');
+            myP.innerText = result;
+        }
+    </script>
+</body>
+</html>
