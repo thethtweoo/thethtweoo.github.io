@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Shop</title>
+    
+    <!-- fontawsome icon -->
+    <link rel="stylesheet" href="Fontawsome/css/all.min.css">
+    <script src="Fontawsome/js/all.min.js"></script>
+
+    <script src="jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Start Nav -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">IT Shop</a>
+            <nav class="nav-right">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="checkout.html">
+                <div class="cart-icon-container">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                    <span class="cart-badge" id="item_count">0</span>
+                </div> </a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <div>
+        <table border="1" cellpadding="70" cellspacing="">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div><br><br>
+
+    <button id="order">Order Now</button>
+    <br><br><br>
+
+
+
+
+</body>
+
+</html>

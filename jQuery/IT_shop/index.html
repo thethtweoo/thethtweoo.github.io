@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="Fontawsome/css/all.min.css">
     <script src="Fontawsome/js/all.min.js"></script>
 
+    <script src="jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
+
     <!-- css -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,10 +23,11 @@
             <a href="index.html" class="brand-logo">IT Shop</a>
             <nav class="nav-right">
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="checkout.html">
                 <div class="cart-icon-container">
                     <i class="fa-solid fa-cart-shopping cart-icon"></i>
-                    <span class="cart-badge">0</span>
-                </div>
+                    <span class="cart-badge" id="item_count">0</span>
+                </div> </a>
             </nav>
         </div>
     </header>
@@ -42,7 +46,7 @@
                 <div class="product-details">
                     <h3 class="product-title">Laptop 1</h3>
                     <p class="product-price">Price : 2300000 MMK</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
+                    <button class="btn-add-to-cart addToCart" data-id="1" data-name="laptop 1" data-price="2300000">Add to Cart</button>
                 </div>
             </div>
 
@@ -53,7 +57,7 @@
                 <div class="product-details">
                     <h3 class="product-title">Laptop 2</h3>
                     <p class="product-price">Price : 2000000</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
+                    <button class="btn-add-to-cart addToCart" data-id="2" data-name="laptop 2" data-price="2000000" >Add to Cart</button>
                 </div>
             </div>
 
@@ -64,7 +68,7 @@
                 <div class="product-details">
                     <h3 class="product-title">Laptop 3</h3>
                     <p class="product-price">Price : 1900000</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
+                    <button class="btn-add-to-cart addToCart" data-id="3" data-name="laptop 3" data-price="1900000">Add to Cart</button>
                 </div>
             </div>
 
@@ -75,7 +79,7 @@
                 <div class="product-details">
                     <h3 class="product-title">Laptop 4</h3>
                     <p class="product-price">Price : 1850000</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
+                    <button class="btn-add-to-cart addToCart" data-id="4" data-name="laptop 4" data-price="1850000">Add to Cart</button>
                 </div>
             </div>
 
@@ -86,7 +90,7 @@
                 <div class="product-details">
                     <h3 class="product-title">iPhone 1</h3>
                     <p class="product-price">Price : 3400000</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
+                    <button class="btn-add-to-cart addToCart" data-id="5" data-name="iPhone 1" data-price="3400000">Add to Cart</button>
                 </div>
             </div>
 
@@ -97,7 +101,7 @@
                 <div class="product-details">
                     <h3 class="product-title">iPhone 2</h3>
                     <p class="product-price">Price : 3200000</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
+                    <button class="btn-add-to-cart addToCart" data-id="6" data-name="iPhone 2" data-price="3200000">Add to Cart</button>
                 </div>
             </div>
 
@@ -108,7 +112,7 @@
                 <div class="product-details">
                     <h3 class="product-title">iPhone 3</h3>
                     <p class="product-price">Price : 3100000</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
+                    <button class="btn-add-to-cart addToCart" data-id="7" data-name="iPhone 3" data-price="3100000">Add to Cart</button>
                 </div>
             </div>
 
@@ -119,7 +123,7 @@
                 <div class="product-details">
                     <h3 class="product-title">iPhone 4</h3>
                     <p class="product-price">Price : 3000000</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
+                    <button class="btn-add-to-cart addToCart" data-id="8" data-name="iPhone 4" data-price="3000000">Add to Cart</button>
                 </div>
             </div>
 

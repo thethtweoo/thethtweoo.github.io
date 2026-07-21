@@ -222,7 +222,47 @@
                 $('#upd_year').val(year);
                 
                
+            });
+
+            // For Update 
+            $('#upd').click(function(){
+                let key = $('#key').val();
+                let name = $('#upd_name').val();
+                let email = $('#upd_email').val();
+                let phone = $('#upd_phone').val();
+                let year = $('#upd_year').val();
+
+                console.log(key, name, email, phone, year);
+
+
+
+                let studentData = localStorage.getItem('students_key');
+                if(studentData){
+                    let studentArray = JSON.parse(studentData);
+
+                    console.log(studentArray[key].stu_name);
+
+                    studentArray[key].stu_name = name;
+                    studentArray[key].stu_email = email;
+                    studentArray[key].stu_phone = phone;
+                    studentArray[key].stu_year = year;
+
+                    let studentString = JSON.stringify(studentArray);
+                    localStorage.setItem('students_key', studentString);
+
+                    getData();
+                    
+                }
+                
             })
+
+
+
+
+
+
+
+
         });
     </script>
 
